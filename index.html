@@ -1,23 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script src="js/application.js"></script>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-  </head>
-  <body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/application.js"></script>
 
-  </body>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Shopping Cart</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price USD</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="item">
+              <td class="name">Fish</td>
+              <td class="price">9.50</td>
+              <td class="qty">
+                <input type="number" value="0">
+              </td>
+              <td class="total">20.00</td>
+              <td>
+                <button class="btn btn-danger btn-sm remove">Remove</button>
+              </td>
+            </tr>
+
+            <tr class="item">
+              <td class="name">Broccoli</td>
+              <td class="price">3.00</td>
+              <td class="qty">
+                <input type="number" value="0">
+              </td>
+              <td class="total">6.00</td>
+              <td>
+                <button class="btn btn-danger btn-sm remove">Remove</button>
+              </td>
+            </tr>
+            <tr class="item">
+              <td class="name">Apples</td>
+              <td class="price">4.00</td>
+              <td class="qty">
+                <input type="number" value="0">
+              </td>
+              <td class="total">8.00</td>
+              <td>
+                <button class="btn btn-danger btn-sm remove">Remove</button>
+              </td>
+            </tr>
+            
+          </tbody>
+          <tfoot>
+           <tr>
+                <td>
+                  <input class="nameField" type="text" placeholder="Item">
+                </td>
+                <td>
+                  <input class="priceField" type="number" placeholder="5.00">
+                </td>
+                <td>
+                  <button class="btn btn-success btn-sm add">Add</button>
+                </td>
+              </tr> 
+          </tfoot>
+        </table>
+        <h1>Total Price: $ <span id="totalPrice"></span></h1>
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
